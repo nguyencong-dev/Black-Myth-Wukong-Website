@@ -1,0 +1,88 @@
+/*Author: nguyencong-dev(https://github.com/nguyencong-dev)*/
+
+/*import google fronts: Garamond*/
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "EB Garamond", serif;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#root-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #0a0808;
+}
+
+.dynamic-menu {
+  color: #a5a5a5;
+  text-transform: uppercase;
+  position: fixed;
+  width: max-content;
+  top: 10%;
+  left: 5%;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  > .active {
+    color: white;
+    font-size: 1.4rem;
+  }
+  > :hover {
+    color: white;
+  }
+}
+
+.fixed-branch {
+  position: fixed;
+  width: 6%;
+  top: 6%;
+  right: 6%;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 25px;
+  cursor: pointer;
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.hero-section video {
+  width: 100%;
+  object-fit: cover;
+}
+
+.handle-text-box {
+  position: absolute;
+  font-size: 0;
+  width: 50%;
+  top: 20%;
+  right: 6%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50;
+  cursor: pointer;
+}
+.hero-logo{width: 85%;}
+.buy-now-button{width: 50%;}
