@@ -1,0 +1,49 @@
+/*Author: nguyencong-dev(https://github.com/nguyencong-dev)*/
+
+"use strict";
+const dynamicMenu = document.getElementById("dynamic-menu");
+const sidebarMenu = document.getElementById("sidebar-menu");
+const fixedBuyNowButton = document.getElementById("fixed-buy-now-button");
+const fixedLanguageChangeButton = document.getElementById(
+  "fixed-languages-change-section",
+);
+
+const pageLink = document.querySelectorAll(".page-link");
+const handleActiveNavigation = () => {
+  let fromTop = window.scrollY;
+
+  pageLink.forEach((link) => {
+    let section = document.querySelector(link.hash);
+
+    if (
+      section.offsetTop <= fromTop + 300 &&
+      section.offsetTop + section.offsetHeight > fromTop + 300
+    ) {
+      //HIGHTLIGHT CURRENT LINK
+      link.firstElementChild.classList.add("active");
+      //TOGGLE FIXED DYNAMIC MENU AND FIXED SIDEBAR
+      if (link.hash === "#hero-section") {
+        dynamicMenu.classList.remove("hidden");
+        sidebarMenu.classList.add("hidden");
+        fixedBuyNowButton.classList.add("hidden");
+        fixedLanguageChangeButton.classList.add("hidden");
+      }
+    } else {
+      //REMOVE HIGHTLIGHT CURRENT LINK
+      link.firstElementChild.classList.remove("active");
+      if (link.hash === "#hero-section") {
+        dynamicMenu.classList.add("hidden");
+        sidebarMenu.classList.remove("hidden");
+        fixedBuyNowButton.classList.remove("hidden");
+        fixedLanguageChangeButton.classList.remove("hidden");
+      }
+    }
+  });
+};
+
+
+//LISTEN ONCE WHEN PAGE IS FULLY LOADED
+window.addEventListener('load',handleActiveNavigation)
+
+//LISTEN WHEN SCROLL
+window.addEventListener('scroll',handleActiveNavigation)
