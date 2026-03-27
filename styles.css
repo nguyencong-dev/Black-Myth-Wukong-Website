@@ -389,9 +389,7 @@ a {
   display: none;
 }
 
-.swiper-button-next::before,
 .swiper-button-next::after,
-.swiper-button-prev::before,
 .swiper-button-prev::after {
   display: none;
 }
@@ -414,3 +412,112 @@ a {
   color: transparent;
   font-size: 0;
 }
+
+.news-swiper-pagination{
+  position: absolute;
+  width: 60% !important;
+  bottom: 120px !important;
+  left: unset !important;
+  z-index: 901 !important;
+  align-items: center;
+  justify-content: flex-end;
+  /* display: flex; */
+  display: none;
+  @media (min-width: 992px){
+    display: flex;
+  }
+}
+
+/* Stronger Swiper pagination styles */
+.news-swiper .swiper-pagination-bullet,
+.news-swiper-pagination .swiper-pagination-bullet {
+  width: 40px !important;
+  height: 3px !important;
+  opacity: 1 !important;
+  background-color: #636e72 !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: white !important;
+}
+
+.news-social{
+  width: 60%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.news-social svg{
+  width: 20px;
+  height: 20px;
+}
+
+.news-social svg:hover{
+  cursor: pointer;
+  color: #af803e;
+}
+
+.news-read-more-btn{
+  cursor: pointer;
+  margin-top: 15px;
+  padding: 8px 50px;
+  font-size: 1.2rem;
+  background-image: url('./assets/images/news-look-more.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.news-read-more-btn:hover{
+  color:white
+}
+
+.play-video-full-screen-model{
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.play-video-full-screen-model-content{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+  box-shadow: 0 0 0.5rem #505050;
+  -webkit-box-shadow: 0 0 5rem #505050
+}
+
+.play-video-full-screen-model-content video{
+  width: 100%;
+}
+
+.play-video-full-screen-model-close{
+  position: absolute;
+  right: 0;
+  top: -30px;
+  font-size: 65px;
+  font-weight: bold;
+}
+
+.play-video-full-screen-model-close:hover,
+.play-video-full-screen-model-close:focus{
+  color: white;
+  cursor: pointer;
+}
+
+.overview-section{
+  height: 50vh  ;
+}
+
+

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Black Myth Wukong - Nguyen Cong</title>
+    <link rel="icon" href="./assets/images/thumb-1920-994017.png">
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
         integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
@@ -23,7 +24,7 @@
             <a href="#hero-section" class="page-link">
                 <div class="dynamic-menu-item active">Home</div>
             </a>
-            <a href="#rating-section" class="page-link">
+            <a href="#news-section" class="page-link">
                 <!-- < href="#new-section" class="page-link"> -->
                 <div class="dynamic-menu-item">News</div>
             </a>
@@ -58,12 +59,26 @@
                     </div>
                     <div class="nav-hover">
                         <img src="assets/images/nav_hover.png" alt="nguyencong-dev">
-                        <span>News</span>
+                        <span>Home</span>
                     </div>
                 </div>
             </a>
             <a href="#rating-section" class="page-link">
-                <!-- < href="#new-section" class="page-link"> -->
+                <div class="sidebar-menu-item">
+                    <div class="nav-default">
+                        <img src="assets/images/nav_default.png" alt="nguyencong-dev">
+                    </div>
+                    <div class="nav-active">
+                        <img src="assets/images/nav_active.png" alt="nguyencong-dev">
+                    </div>
+                    <div class="nav-hover">
+                        <img src="assets/images/nav_hover.png" alt="nguyencong-dev">
+                        <span>Ratting</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#news-section" class="page-link">
                 <div class="sidebar-menu-item">
                     <div class="nav-default">
                         <img src="assets/images/nav_default.png" alt="nguyencong-dev">
@@ -298,13 +313,13 @@
                     </div>
 
                     <!-- navigation button -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev news-swiper-button"></div>
+                    <div class="swiper-button-next news-swiper-button"></div>
                 </div>
 
-                <div class="swiper-pagination news-swiper-button"></div>
+                <div class="swiper-pagination news-swiper-pagination"></div>
 
-                <div class="news-social">My social
+                <div class="news-social">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-youtube" viewBox="0 0 16 16">
                         <path
@@ -343,6 +358,16 @@
                 </div>
 
                 <div class="news-read-more-btn">Read more</div>
+                <!-- full screen video -->
+                <div id="play-video-full-screen-model" class="play-video-full-screen-model">
+                    <span id="play-video-full-screen-model-close"
+                        class="play-video-full-screen-model-close">&times;</span>
+                    <div class="play-video-full-screen-model-content">
+                        <video id="news-video-full-screen" controls>
+                            <source src="./assets/videos/full_trailer.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
 
             </div>
             <div id="overview-section" class="overview-section"></div>

@@ -59,11 +59,29 @@ const swiper = new Swiper(".news-swiper", {
     prevEl: ".swiper-button-prev",
   },
   pagination: {
-    el: ".swiper-pagination",
+    el: ".news-swiper-pagination",
     clickable: true,
     renderBullet: function (index, className) {
       return `<div class="news-swiper-pagination-item ${className}"></div>`;
     },
   },
 });
+
+//new video full screen modal
+
+const newsVideoPlayIcon = document.getElementById('news-video-play-icon')
+const fullScreenVideoModel = document.getElementById('play-video-full-screen-model')
+const closeFullScreenVideoModal = document.getElementById('play-video-full-screen-model-close')
+const newsVideo = document.getElementById('news-video-full-screen')
+
+newsVideoPlayIcon.addEventListener("click", () => {
+  fullScreenVideoModel.style.display = 'block'
+  newsVideo.play()
+})
+
+closeFullScreenVideoModal.addEventListener("click", () => {
+  fullScreenVideoModel.style.display = 'none'
+  newsVideo.pause()
+})
+
 
